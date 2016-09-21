@@ -1,5 +1,6 @@
 # MG
 Museum and Gallery
+#tips
 First, find the file in /home,then you will find the js and css folders which are filled with js and css.
 Then there is an index.html, so you can use this one to draw your own website.
 I will help you later.
