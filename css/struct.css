@@ -11,17 +11,21 @@
         color:white;}
     #left{
         z-index: 1;
-        -webkit-box-shadow:8px 8px 8px rgba(0,0,0,0.1);
-        -moz-box-shadow:0 8px 0 rgba(0,0,0,0.1);
-        -o-box-shadow:0 8px 0 rgba(0,0,0,0.1);
-        box-shadow:8px 8px 8px rgba(0,0,0,0.1);
+
+        width:16em;
+        height:100%;
     }
     #header{
-        background-color: #595757;width:20%;height:20%;color:#727171;position:absolute;top:0;left:0;z-index:-1;font-size:1em;
+        background-color: #595757;width:inherit;height:20%;color:#727171;position:absolute;top:0;left:0;z-index:0;font-size:1em;
 
     }
     #title{
-        padding-left:5px
+        padding-left:5px;
+        width:120%;
+        height:120%;
+        position: relative;
+        top:-20%;
+        left:-30%;
     }
     #header span{
         font-size: 2em;}
@@ -46,7 +50,7 @@
         box-shadow:0 8px 0 rgba(0,0,0,0.1);
     }
     .nav{
-        background: #595757;width:10%;
+        background: #595757;width:8em;
         height:5%;
         position: absolute;
         top:20%;
@@ -57,7 +61,7 @@
         color: #dcdddd;
     }
     #gallery{
-        left:10%;
+        left:8em;
     }
     #go-to-map{
         z-index: -100;pointer-events: none;
@@ -70,13 +74,13 @@
         color: #dcdddd;
     }
     #content{
-        background-color:#666666;width:20%;height:75%;position:absolute;top:25%;left:0;z-index: 0;
+        background-color:#666666;width:inherit;height:75%;position:absolute;top:25%;left:0;z-index: 0;
     }
     #selector{
         font-size: 0.8em;
         position:relative;
         top:6em;
-        left:10%;
+        left:5em;
         line-height:1.2em;
         color:#dcdddd;
     }
@@ -89,24 +93,22 @@
         width: 100%;height: 100%;border: solid;border-color: #2b542c;
     }
     #map{
-        z-index: 0;width:80%;height:100%;position:absolute;top:0;left:20%
+        z-index: 0;width:100%;height:100%;position:fixed;top:0;left:21.2em
     }
-    .open_button{
+    .button{
 
         cursor:pointer;
         background:#666666;
         color:white;
         text-decoration:none;
-        padding:15px 0px;
         display:inline-block;
         text-align:center;
-        z-index: -10;
-        position: fixed;
-        left:15%;
-        top:10%;
+        z-index: 10;
+
         text-transform:uppercase;
         margin-right:3%;
-        width:5%;
+        width:27px;
+        height:27px;
         border:solid 1px #999999;
         -webkit-box-shadow:0 3px 0 rgba(0,0,0,0.1);
         -moz-box-shadow:0 3px 0 rgba(0,0,0,0.1);
@@ -116,12 +118,26 @@
         -moz-border-radius:3px;
         -o-border-radius:3px;
         border-radius:3px
-
     }
+    #close_button{
+        position: fixed;
+        left:15em;
+        bottom:5px;
+        opacity:0;/* change */
+    }
+    #open_button{
+        position: fixed;
+        left:13em;
+        bottom:5px;
+        opacity:1;
+    }
+
     #small_tools{
         width:26px;
         height:26px;
-
+        position: fixed;
+        left:17em;
+        top:80px;
         
     }
     .control_button{
@@ -132,8 +148,10 @@
         background: #ffffff;
         border-radius: 13px;
         box-shadow: #2b2d2f;
+        border:1px #666666 solid;
+        z-index:3;
         position: fixed;
-        left:20.5%;
+        left:16.7em;/* change */
         top:80px;
     }
 
@@ -165,7 +183,7 @@
         pointer-events:none;
         z-index: 100;
     }
-    .open_button{
+    .button{
         cursor:pointer;
         background:#555555;
         color:#000;
@@ -177,7 +195,7 @@
         text-align:center;
         z-index: 10;
         position: fixed;
-        left:35%; /*此处对齐中央应该如何做？*/
+ /*此处对齐中央应该如何做？*/
         top:0;
         text-transform:uppercase;
 
@@ -195,7 +213,13 @@
         border-radius:3px;
         z-index: 10;
     }
-
+    #open_button{
+        left:35%;
+    }
+    #close_button {
+        opacity: 0;
+        z-index: -100;
+    }
     #title{opacity:0;z-index:-100;}
     .nav{
         color:#a1a1a1;
@@ -234,25 +258,6 @@
     }
     #map{
         z-index:0;width:100%;height:100%;position:absolute;top:0;left:0;
-    }
-    #small_tools{
-        width:26px;
-        height:26px;
-
-        
-    }
-    .control_button{
-        width:26px;
-        height:26px;
-        cursor: auto;
-        line-height:26px;
-        background: #ffffff;
-        border-radius: 13px;
-        box-shadow: #2b2d2f;
-        position: fixed;
-        left:14px;
-        top:90px;
-        z-index:1;
     }
 
 }
