@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta charset="UTF-8">
-    <title>Museum & Gallery</title>
+    <title>M.A.P.</title>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
     <link rel="stylesheet" href="css/struct.css"/>
@@ -20,11 +21,7 @@
 <body >
     <div id="left">
     <div id="header" >
-        <div id="title">
-            &emsp;&ensp; <span>M</span>useum<br />
-            &emsp; g<span>A</span>llery<br />
-            exhi<span>P</span>ition
-        </div>
+        <img src="filesource\img\logo.svg" id="title"/>
     </div>
     <div id="log-sign">
         <nav id="tag">
@@ -58,7 +55,7 @@
         </div>
     </div>
     <div id="content" >
-    <div style="padding: 10px;">
+    <div >
         <div id="selector" >
             <input id="Checkbox1" type="checkbox" class="select_box"/>美术馆
             <br/>
@@ -71,12 +68,14 @@
     </div>
     <!--以上是左侧边栏，以下是地图及控件-->
     <div id="opener">
-        <a id="open_button" class="open_button" onclick="open_left()"> 最新活动</a>
-
+        <a id="open_button" class="button" onclick="open_left()"> 最新活动</a>
+        <a id="close_button" class="button" onclick="close_left()">X</a>
     </div>
 
-    <div id="map">
+    <div >
+        <div id="map">
 
+        </div>
     </div>
     <div id="small_tools">
         <a class="control_button" title="get_location" onclick="get_location()"></a>
