@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        #oyesgo_city_popping{
+            display:none;
+            position:absolute;
+            z-index:9999;
+            background-color:rgb(255,255,255);
+            width:254px;
+            height:140px;
+            border:1px solid rgb(0,128,0);
+        }
+        #oyesgo_city_popping h3
+        {
+            border-bottom:1px solid #C4D3E6;
+            color:#5E5E5E;
+            font-size:12px;
+            font-weight:normal;
+            line-height:200%;
+            margin:0 auto;
+            width:94%;
+        }
+        #oyesgo_city_popping ul
+        {
+            margin-top:7px;overflow:hidden;width:300px;
+            padding-left:0px;
+            margin-top:0px;
+        }
+        #oyesgo_city_popping ul li {float:left;line-height:190%;text-align:center;width:17%;list-style-type:none; font-size:10pt;}
+        .arr_btn_close{position:absolute;right:9px;top:5px;cursor:pointer;}  
+
+
+    </style>  
+
+</head>
+
+<body>
+
+<div>  
+        出 发：<input name="depcity" autocomplete="off" style="width: 98px;" id="dep" >  
+        到 达：<input name="arrcity" autocomplete="off" style="width: 98px;" id="arr">  
+</div>  
+<div name="cityframe" id="oyesgo_city_popping" >  
+        <h3>热门城市</h3>  
+        <ul></ul>  
+        <a title="close" id="oyesgo_city_closewin" class="arr_btn_close">x</a>  
+</div>  
+<input style="display:none;" id="oyesgo_hidden_input">  
+</body>
+</html>
+<script>  
+                                        //城市框点击事件，显示热门城市div  
+                                        function fun(){
+                                            var event = this;
+                                            var eleobj = document.getElementById('oyesgo_city_popping');
+                                            //初始化城市列表li  
+                                            var ulobj = eleobj.getElementsByTagName("ul")[0];
+                                            ulobj.innerHTML = '';
+                                            var lifacObj = lifactory(event);
+                                            var allcity = {
+                                                'depcity':'北京 上海 广州 深圳 杭州 南京 成都 武汉 青岛 大连 重庆 三亚 郑州 宁波 西安 长沙 昆明 沈阳 厦门 哈尔滨'.split(' '),//出发城市  
+                                                'arrcity':'北京 上海 广州 深圳 杭州 南京 成都 武汉 青岛 大连 重庆 三亚 郑州 宁波 西安 长沙 巴黎 纽约 东京 新加坡'.split(' ') //到达城市  
+                                            }
+
+                                            cityarry=allcity[event.name];
+                                            for (var i=0; i<cityarry.length; i++) {
+                                                var liobj=lifacObj(cityarry[i],eleobj);
+                                                ulobj.appendChild(liobj);
+                                            };
+                                            //显示城市选择框  
+                                            //eleobj.style.display='block';  
+                                            openCitySelectFrame(event);
+
+                                        }
+                                        //li工厂  
+                                        function lifactory(ele){
+                                            //attachEvent  
+                                            var func=function(name,cityframe){
+                                                var liobj=document.createElement("li");
+                                                liobj.innerHTML='<a  style="cursor:pointer;">'+name+'</a>';
+                                                var aobj=liobj.getElementsByTagName('a')[0];
+                                                appendEventListener.call(aobj,'click',function(){
+                                                    //城市点击后，将对应城市名称填入框中  
+                                                    ele.value=name;
+                                                    //城市选择框关闭  
+                                                    closeCitySelectFrame(ele);
+                                                });
+                                                return liobj;
+                                            };
+                                            return func;
+                                        }
+                                        //增加事件  
+                                        function appendEventListener(eventtype,func){
+                                            if (this.addEventListener) {
+                                                this.addEventListener(eventtype, func, false);
+                                            }
+                                            else if (this.attachEvent) {
+                                                eventtype='on'+eventtype;
+                                                this.attachEvent(eventtype, func);
+                                            }
+                                        }
+
+                                        //关闭城市选择框  
+                                        function closeCitySelectFrame(){
+                                            try {
+                                                var cityframe = document.getElementById('oyesgo_city_popping');
+                                                cityframe.style.display = 'none';
+                                                if (!!cityframe.inputeleobj) {
+                                                    cityframe.inputeleobj.focus();
+                                                }
+                                                //从自定义属性中移除文本框  
+                                                cityframe.inputeleobj = null;
+                                            }catch(e){}
+                                        }
+
+                                        //开启城市选择框  
+                                        function openCitySelectFrame(inputele){
+                                            if(!inputele){
+                                                return;
+                                            }
+                                            var cityframe=document.getElementById('oyesgo_city_popping');
+                                            //移动框的左边界与input框的边界一致  
+                                            try {
+                                                cityframe.style.left = (inputele.offsetLeft) + 'px';
+                                            }catch(e){
+                                                cityframe.style.left = inputele.posLeft;
+                                            }
+
+                                            cityframe.style.display='block';
+                                            //将文本框对象添加到自定义属性  
+                                            cityframe.inputeleobj=inputele;
+                                        }
+                                        //为城市框添加事件  
+                                        (function(){
+                                            var depele=document.getElementById('dep');
+                                            var arrele=document.getElementById('arr');
+                                            var elearray=[depele,arrele];
+                                            var eleobj=document.getElementById('oyesgo_city_popping');
+                                            for (var i=0; i<elearray.length; i++) {
+                                                elearray[i].onclick=fun;
+                                            };
+                                            //对弹出框中的小叉号添加关闭事件  
+                                            var closebutton=document.getElementById('oyesgo_city_closewin');
+                                            appendEventListener.call(closebutton,'click',function(){
+                                                closeCitySelectFrame();
+                                            });
+                                            //添加doc click事件  
+                                            appendEventListener.call(document,'click',function(){
+                                                var eleobj=document.activeElement;
+                                                var namefun={'depcity':true,    'arrcity':true,'cityframe':true};
+                                                if(!namefun[eleobj.name]){
+                                                    closeCitySelectFrame();
+                                                }
+                                            });
+
+                                        })();
+</script> 

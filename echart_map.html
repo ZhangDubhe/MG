@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>MapOfZhengjiangProvince</title>
+	<meta charset="utf-8" />
+    <script src="js/echarts.js"></script>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+<div>
+    <div id="zhejiang" style="width:700px;height:700px"></div>
+    <script>
+
+        $.get('filesource/json/zhejiang.json',function(data){
+ 
+            echarts.registerMap('Zhejiang',data);
+            var chart = echarts.init(document.getElementById('zhejiang'));
+            chart.setOption({
+                series:[{
+                    type:'map',
+                    map:'zhejiang'
+                }]
+            });
+        });
+    </script>
+</div>
+</body>
+</html>

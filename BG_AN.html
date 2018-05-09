@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <title>ArtMap Of Shanghai</title>
+
+
+    <link rel="icon" href="filesource/img/favicon.ico" mce_href="filesource/img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/init.css" />
+</head>
+<body >
+<div class="overlay">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="progress progress-info progress-striped active">
+                <div class="bar"style="width: 10%">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+<!--home page,default page-->
+        <div id="home" class="cover-container">
+        <!--head brand name logo tags-->
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <a href=""><h3 class="masthead-brand">M.A.P. <img class="masthead-brand-logo" src="filesource/img/logo.svg">
+                    </h3></a>
+
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li class="active"><a onclick="get_home()" href="#home">Home</a></li>
+                            <li><a  onclick="get_feature()" href="#features">Features</a></li>
+                            <li><a onclick="get_contact()"href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div>
+
+
+            </div>
+            <div  class="inner cover">
+
+
+                <section class="inner-section">
+                    <div id="myPICTURE" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myPICTURE" data-slide-to="0" class="active"></li>
+                            <li data-target="#myPICTURE" data-slide-to="1"></li>
+                            <li data-target="#myPICTURE" data-slide-to="2"></li>
+                            <li data-target="#myPICTURE" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="filesource/img/homepage/slider1.jpg" alt="1 slider" width="100%">
+                                <div class="carousel-caption">
+                                    <h4>博物馆 | 震旦博物馆</h4>
+                                    <p>周五晚的博物馆之夜，你可曾去过？</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <a href="http://dwz.cn/5yZsdV">
+                                    <img src="filesource/img/homepage/slider2.jpg" alt="2 slider" width="100%">
+                                    <div class="carousel-caption">
+                                        <h4>专题 | 行走上海</h4>
+                                        <P>博主们的记录</P>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="http://dwz.cn/5yZo6W">
+                                    <img src="filesource/img/homepage/slider3.jpg" alt="3 slider" width="100%">
+                                    <div class="carousel-caption">
+
+                                        <h4>展览 | 田子坊琉璃展</h4>
+                                        <p>三楼展厅长期为琉璃展，二楼的展览你去过多少？</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="http://news.ecnu.edu.cn/46/f9/c1835a83705/page.htm">
+                                    <img src="filesource/img/homepage/slider4.jpg" alt="4 slider" width="100%">
+                                    <div class="carousel-caption">
+                                        <h4>展览 | 华东师大敦煌展</h4>
+                                        <p>遇见敦煌，来师大图书馆吧</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#myPICTURE" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myPICTURE" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                </section>
+                <section class="inner-section-tap">
+
+                </section>
+                <section  class="inner-section">
+                    <h2 class="banner">别错过了更精彩的——</h2>
+                    <p class="lead">
+                        <a href="index.php" class="btn btn-lg btn-default">
+                            进入地图模式浏览
+                        </a></p>
+                </section>
+
+
+            </div>
+            <!--copyright-->
+            <div class="mastfoot">
+                <div class="inner">
+                    <p>Designing: <a href="person/syl.html">Sun Yalan</a>
+                        </br>Coding: <a href="person/zht.html">Zhang Haotian</a>,
+                        <a href="person/qjl.html">Qian Jiale</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!--features page, can access from the tag names feature
+        usr can see the features of this website
+        -->
+        <div id="features" class="cover-container">
+            <!--head brand name logo tags-->
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <a href=""><h3 class="masthead-brand">M.A.P. <img class="masthead-brand-logo" src="filesource/img/logo.svg"></h3></a>
+
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li ><a onclick="get_home()" href="#home">Home</a></li>
+                            <li class="active"><a  onclick="get_feature()" href="#features">Features</a></li>
+                            <li><a onclick="get_contact()"href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div  class="inner cover">
+                <section class="inner-section-tap">
+                </section>
+                <section class="inner-section-tap">
+                </section>
+                <section class="inner-section-tap">
+                </section>
+
+                <article class="inner-section">
+                    <figure>
+                        <img src="filesource/img/p6.png" width="100%">
+                        <figcaption> 科创项目 </figcaption>
+                    </figure>
+                    <br/>
+                    <h3>直观的艺术地图</h3>
+                    <br/>
+                    <p class="lead">不同类别的博物馆在地图上以不同颜色进行显示，为用户提供了很好的辨识度。
+                        用户可以通过筛选、关键词搜索等方式，直观的在地图上看到博物馆、美术馆或者展览的地点，
+                        以及相关的交通信息，以及不同展馆之间的距离、交通方式等，方便用户选择多个展览在同一天内先后参观。
+                    </p>
+                    <br/>
+                    <figure>
+                        <img src="filesource/img/UI_3_sample-01.jpg" width="100%">
+                        <figcaption>地图界面UI设计</figcaption>
+                    </figure>
+                </article>
+
+                <section class="inner-section-tap"></section>
+                <div id="feature-pic-2" class="feature-pic" ></div>
+                <article class="inner-section">
+                    <h3>不一样的社交体验</h3>
+                    <br/><p class="lead">用户在浏览过博物馆、美术馆、展览后，可根据个人喜好进行展馆或展览的收藏和评论。
+                    同时可以通过打卡点亮用户个人所属地图该展馆的位置区间，形成用户个人的足迹地图</p>
+                    <br/>
+                    <figure>
+                        <img src="filesource/img/_A010016.jpg" width="100%">
+                        
+                    </figure>
+                </article>
+                <div id="feature-pic-3" class="feature-pic" ></div>
+                <section class="inner-section-tap ">
+                </section>
+                <section class="inner-section-tap">
+                </section>
+                <section class="inner-section-tap">
+                </section>
+
+
+
+            </div>
+
+
+        </div>
+        <!--contact page, can access from the tag names contact.
+        Here is the contact email and post-on table, usr can fill the table then upload to our site.-->
+        <div id="contact" class="cover-container">
+
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <a href=""><h3 class="masthead-brand">M.A.P. <img class="masthead-brand-logo" src="filesource/img/logo.svg"></h3></a>
+
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li ><a onclick="get_home()" href="#home">Home</a></li>
+                            <li ><a  onclick="get_feature()" href="#features">Features</a></li>
+                            <li class="active"><a onclick="get_contact()"href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div  class="inner cover">
+                <section class="inner-section-tap">
+                </section>
+                <section class="inner-section-tap">
+                </section>
+                <section class="inner-section-tap">
+                </section>
+                <section class="inner-section">
+                    <h2>Contact Us</h2>
+                    <p>——来与我们联系吧</p>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="ContactName">昵称</label>
+                                    <input type="text" class="form-control" id="ContactName" placeholder="Qian Nanshen">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ContactEmail">Email</label>
+                                    <input type="email" class="form-control" id="ContactEmail" placeholder="Mysterious@example.com">
+                                </div>
+                                <div class="form-group ">
+                                    <label for="MessageText">您的建议</label>
+                                    <textarea id="MessageText" class="form-control" placeholder="Description  or Suggestion"></textarea>
+                                </div>
+                                <a id="bt-message" onclick="uploadMessage();" class="btn-upload"></a>
+                                <label for="bt-message" >Send</label>
+                            </form>
+
+                            <hr>
+                            <h5>可以在这里找到我们：</h5>
+                            <ul class="list-inline banner-social-buttons">
+                                <li>
+                                    <a href="#" class="btn-logo btn-wechat"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn-logo btn-youku"></a>
+                                </li>
+                            </ul>
+                            <ul class="list-inline">
+                                <li>
+                                    <span class="network-name">Wechat</span>
+                                </li>
+                                <li>
+                                    <span class="network-name">Youku</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<script src="js/jquery-3.2.0.min.js" charset="UTF-8"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.js"><\/script>')
+</script>
+<script src="js/bootstrap.js" charset="UTF-8"></script>
+            <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/control.js" charset="UTF-8"></script>
+
+</body>
+
+</html>
+<script>
+    function  get_home() {
+        $('#features').hide();
+        $('#home').show();
+        $('#contact').hide();
+    }
+    function get_feature(){
+        $('#features').show();
+        $('#home').hide();
+        $('#contact').hide();
+
+    }
+    function  get_contact() {
+        $('#features').hide();
+        $('#home').hide();
+        $('#contact').show();
+    }
+
+    $(function(){
+        $('.carousel').carousel({interval:4000})
+    });
+
+</script>
+

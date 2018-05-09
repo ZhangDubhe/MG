@@ -1,0 +1,296 @@
+
+@media (max-width:768px){
+    body {
+        padding: 0;
+        margin: 0;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    html, body, #map {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #header{
+        position:fixed;top:0;left:0;
+        width:100%;
+        z-index:-10;
+    }
+    #title{opacity:0;z-index:-100;}
+    #tag{
+        position: fixed;
+        top: 0.2em;
+        right: 1em;
+        width: 3em;
+        height: 2em;
+        z-index: 100;
+    }
+    #tag img{
+        width:2em;
+    }
+    #tag_svg{
+        pointer-events:none;
+        z-index: 100;
+    }
+    .button{
+        cursor:pointer;
+        background:#555555;
+        color:#000;
+        opacity:0.8;
+
+        text-decoration:none;
+        padding:1.6em 1em  0em 1em;
+        display:inline-block;
+        text-align:center;
+        z-index: 10;
+        position: fixed;
+        /*此处对齐中央应该如何做？*/
+        top:0;
+        text-transform:uppercase;
+
+        width:8em;
+        height:2em;
+        font-size:0.9em;
+
+        -webkit-box-shadow:0 3px 0 rgba(0,0,0,0.1);
+        -moz-box-shadow:0 3px 0 rgba(0,0,0,0.1);
+        -o-box-shadow:0 3px 0 rgba(0,0,0,0.1);
+        box-shadow:0 3px 0 rgba(0,0,0,0.1);
+        -webkit-border-radius:3px;
+        -moz-border-radius:3px;
+        -o-border-radius:3px;
+        border-radius:3px;
+        z-index: 10;
+    }
+
+
+    #nav_group{
+        position: fixed;!important;
+        bottom:0;!important;
+        z-index: 20;!important;
+        width:100%;
+    }
+    .g_nav{
+        color:#a1a1a1;
+        display: block;
+        background: #898989;
+        height:7%;
+
+        float: left;
+        text-align: center;
+        line-height:2em;
+        border:solid 1px;
+        border-top-color:#666666;
+        border-left-color:#666666;
+        border-right-color:#666666;
+        color:white;
+    }
+
+    .g_nav:hover,.g_nav:focus{
+        background: #737272;
+        border-top-color:#808080;
+        color: #ffffff;
+    }
+
+    #go-to-map{
+display: block;!important;
+    }
+    #mine{
+display: block;!important;
+    }
+
+    #table{
+        width: 100%;height: 100%;border: solid;border-color: #2b542c;
+    }
+    #map{
+        display: block;
+        opacity:0;
+        z-index:0;width:100%;height:100%;position:absolute;
+    }
+    #right_map{
+        height:93%;width:100%;
+        display: none;
+        position: absolute;!important;top:7%;left:0;
+        padding-left:0;!important;
+    }
+    #get_location{
+        z-index:1000;
+        position: absolute;
+        left:1.12em;
+        -webkit-left:0.8em;/* change */
+        top:80px;
+        cursor:hand;
+    }
+    .control_button{
+        width:26px;
+        height:26px;
+        cursor: auto;
+        line-height:26px;
+        background: #ffffff;
+        border-radius: 13px;
+        box-shadow: #2b2d2f;
+        border:1px #666666 solid;
+        display: block;
+
+    }
+    #content{
+        display: block;
+        width:100%;
+        height:97%;
+        position:absolute;!important;
+        top:3%;
+        z-index:10;
+        background-color: #666666;
+    }
+    #selector_space{
+        display: block;
+        width:100%;
+        position:fixed;
+        top:15%;
+        z-index:10;
+        height:70%;
+        color:#dcdddd
+    }
+    #selector_list{
+        display:none;
+        position:relative;
+        width: 100%;
+        color:#dcdddd;position:fixed;top:10%;
+
+        height:80%;
+         }
+    #selector_header{
+        background: url('../filesource/img/arrow.png') no-repeat scroll right center transparent;
+        overflow: hidden;
+        width:60px;
+        height:30px;
+        margin-left: 1em;
+        margin-top: 1em;
+        margin-bottom: 0.8em;
+
+    }
+    #selector_header select {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        text-align: center;
+        padding-right: 5px;
+        color: #b5b5b6;
+        font-size: 15px;
+        background: transparent;
+        border: none;
+        width: 60px;
+        height: 100%;
+    }
+    .select_type{
+        width:100%;
+        height:100%;
+        margin-left: 0;
+        list-style: none;
+        padding-left:0;
+        overflow-y:auto;
+        overflow-x: hidden;
+        overflow-scrolling: touch;
+        -webkit-overflow-scrolling: touch;
+    }
+    .select_type  a{
+        width:100%;
+        height:39.8px;
+        display: block;
+        padding-left: 2em;
+        padding-top:19.9px;
+        font-size:12px;
+        color: #DCDDDD;
+        line-height: 0em;
+    }
+    .select_type a:hover{text-decoration: none;}
+
+
+    .list_tag:hover{
+        background-color: #595757;
+        color:#B5B5B6;
+
+    }
+    .list_tag b{
+        color:black;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    .list_tag a:link{
+        text-decoration: none;color:#DCDDDD;
+        vertical-align: middle;
+    }
+
+    .list_tag a:visited{
+        text-decoration: none;color:#DCDDDD;}
+    .list_tag a:hover{
+        color:#999999;
+        text-shadow: #2b2d2f;
+        text-decoration: none;
+    }
+    #mobile-head{
+        display: block;
+        width:100%;
+        height:7%;
+        position:fixed;
+        top:0;
+        z-index:10;
+        
+        background: #898989;
+    }
+    #mobile-selector-selected{
+        color: #EFEFEF;
+
+        line-height: 2.4em;
+    }
+    #mobile-selector-selected img{
+        position: relative;
+        left:0.3em;
+    }
+    #mobile-selector-selected:hover+#mobile-selector{
+        display:block;
+        text-decoration: none;!important;}
+    a:hover{
+        text-decoration: none;!important;
+    }
+
+    #mobile-selector{
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        background-color: #727171;
+        color: #F7F8F8;!important;
+        font-size: 0.9em;
+        line-height: 2em;
+        display: none;
+        width:30%;
+    }
+    #mobile-selector a{
+        display: block;
+        width:100%;
+        list-style: none;
+    }
+    #mobile-selector a:hover{
+        background:#2b2d2f;
+    }
+
+    #inputing{
+        display: none;
+        z-index: 10;
+    }
+    #log_in{
+        display: none;
+    }
+    #sign_in{
+        display: none;
+    }
+    #open_button{
+        width: 0em;
+        height:0em;
+        z-index: -10;
+
+        opacity: 1;
+        display: none;}
+    #left_control{
+        height: 97%;
+    }
+
+}

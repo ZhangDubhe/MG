@@ -1,0 +1,332 @@
+/*
+ * Globals
+ */
+
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+    color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+    color: #333;
+    text-shadow: none; /* Prevent inheritance from `body` */
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+textarea.form-control{
+    height:100px;
+}
+figure{
+    text-align: center;
+}
+.btn-upload{
+    position: relative;
+
+    background-image : url(../filesource/img/icon/icon-upload.svg);
+    background-repeat : no-repeat;
+    display: block;
+    width:10%;
+    height:2em;
+    border: none;
+    border-style: none;!important;
+    border-color: transparent;!important;
+
+    margin-left: 47%;
+}
+.btn-upload:hover{
+    background-image : url(../filesource/img/icon/icon-upload-hover.svg);
+    background-repeat : no-repeat;
+    display: block;
+}
+.btn-logo{
+    width:4em;
+    height:4em;
+    background-image : url(../filesource/img/icon/sprite_logo-08.png);
+    background-repeat : no-repeat;
+    display: block;
+}
+.btn-wechat{
+     background-position: -14px -13px;
+ }
+.btn-youku{
+    background-position: -87px -13px;
+
+}
+/*
+ * Base structure
+ */
+
+html,
+body {
+    height: 100%;
+    background-color: #333;
+}
+body {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0,0,0,.5);
+
+}
+article{
+    text-align: left;!important;
+}
+
+/*processing bar*/
+.overlay{
+    display: none;
+    width:100vh;
+    height:100vh;
+    background: #000;
+}
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%; /* For at least Firefox */
+    min-height: 100%;
+    -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+    box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
+}
+.cover-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+    padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+.masthead{
+    z-index: 1000;
+}
+.masthead-brand {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+    display: inline-block;
+}
+.masthead-nav > li + li {
+    margin-left: 20px;
+}
+.masthead-nav > li > a {
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; /* IE8 proofing */
+    color: rgba(255,255,255,.75);
+    border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > i > a:focus {
+    background-color: transparent;
+    border-bottom-color: #a9a9a9;
+    border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+.nav > li > a{
+    position: relative;
+    display: block;
+    padding:10px 15px;
+    text-decoration: none;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.banner{
+    display: none;
+    width: 100%;
+    background-image: url(../filesource/img/BG/mapbg-02@0,25x.png);;
+    background-repeat: no-repeat;
+    background-position: center;
+    line-height: 100px;
+}
+@media (max-width: 768px) {
+    .banner{
+        display: block;
+    }
+    .cover-heading{
+        width:8em;
+        position: fixed;
+        top:10px;
+        left: 10px;
+
+    }
+    .masthead-brand-logo{
+        width: 4em;
+        margin-left: 1em;
+    }
+
+
+}
+@media (min-width: 768px) {
+    .masthead-brand {
+        float: left;
+    }
+    .masthead-nav {
+        float: right;
+    }
+    .masthead-brand-logo{
+        width: 4em;
+        margin-left: 3em;
+        position: absolute;
+        top:1.2em;
+    }
+
+    .carousel-caption{
+        background-color: #2b2d2f;
+        opacity: 0.7;
+        width: 100%;
+        margin-left:-20% ;
+    }
+
+}
+@media (min-width: 992px) {
+    .masthead-brand {
+        float: left;
+    }
+
+    .masthead-brand-logo{
+        width: 4em;
+        margin-left: 2em;
+    }
+}
+@media (min-width: 1300px) {
+    .masthead-brand {
+        float: left;
+    }
+
+    .masthead-brand-logo{
+        width: 4em;
+        margin-left: 2em;
+    }
+}
+/*
+ * Cover
+ */
+
+.cover {
+    padding: 0 20px;
+}
+.cover .btn-lg {
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+    color: #999; /* IE8 proofing */
+    color: rgba(255,255,255,.5);
+}
+.mastfoot {
+    font-size: 10px;
+}
+
+/*
+ * Affix and center
+ */
+@media (max-width: 768px) {
+    .mastfoot {
+        font-size: 6px;
+    }
+}
+@media (min-width: 768px) {
+    /* Pull out the header and footer */
+    .masthead {
+        position: fixed;
+        top: 0;
+    }
+    .mastfoot {
+        position: fixed;
+        bottom: 0;
+    }
+    /* Start the vertical centering */
+    .site-wrapper{
+        background-image : url(../filesource/img/BG/mapbg-02@0,5x.png);
+        background-repeat : no-repeat;
+        background-position: center;
+    }
+    .site-wrapper-inner {
+        vertical-align: middle;
+    }
+    /* Handle the widths */
+    .masthead,
+    .mastfoot,
+    .cover-container {
+        width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    }
+}
+
+@media (min-width: 992px) {
+    .masthead,
+    .mastfoot,
+    .cover-container {
+        width:700px;
+
+    }
+    .site-wrapper{
+        background-image : url(../filesource/img/BG/mapbg-02@0,5x.png);
+        background-repeat : no-repeat;
+        background-position: center;
+    }
+
+
+}
+
+
+@media (min-width: 1300px) {
+    .site-wrapper{
+        background-image : url(../filesource/img/BG/mapbg-02.png);
+        background-repeat : no-repeat;
+        background-position: center;
+    }
+
+
+}
+/*change pram*/
+#features, #contact{
+    display: none;
+}
+
+
+.inner-section {
+    margin-top:5px;
+}
+.inner-section-tap{
+    display: block;
+    height:2em;
+    width:100%;
+}
+
